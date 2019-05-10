@@ -1,0 +1,80 @@
+"Notes"	"Census Region"	"Census Region Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate
+	"Census Region 1: Northeast"	"CENS-R1"	"2010"	"2010"	147	55317240	0.266
+	"Census Region 1: Northeast"	"CENS-R1"	"2011"	"2011"	161	55521598	0.290
+	"Census Region 1: Northeast"	"CENS-R1"	"2012"	"2012"	142	55761091	0.255
+	"Census Region 1: Northeast"	"CENS-R1"	"2013"	"2013"	173	55943073	0.309
+	"Census Region 1: Northeast"	"CENS-R1"	"2014"	"2014"	172	56152333	0.306
+	"Census Region 1: Northeast"	"CENS-R1"	"2015"	"2015"	155	56283891	0.275
+	"Census Region 1: Northeast"	"CENS-R1"	"2016"	"2016"	188	56209510	0.334
+	"Census Region 1: Northeast"	"CENS-R1"	"2017"	"2017"	162	56470581	0.287
+"Total"	"Census Region 1: Northeast"	"CENS-R1"			1300	447659317	0.290
+	"Census Region 2: Midwest"	"CENS-R2"	"2010"	"2010"	183	66927001	0.273
+	"Census Region 2: Midwest"	"CENS-R2"	"2011"	"2011"	231	67158835	0.344
+	"Census Region 2: Midwest"	"CENS-R2"	"2012"	"2012"	226	67316297	0.336
+	"Census Region 2: Midwest"	"CENS-R2"	"2013"	"2013"	219	67547890	0.324
+	"Census Region 2: Midwest"	"CENS-R2"	"2014"	"2014"	211	67745108	0.311
+	"Census Region 2: Midwest"	"CENS-R2"	"2015"	"2015"	231	67907403	0.340
+	"Census Region 2: Midwest"	"CENS-R2"	"2016"	"2016"	248	67941429	0.365
+	"Census Region 2: Midwest"	"CENS-R2"	"2017"	"2017"	236	68179351	0.346
+"Total"	"Census Region 2: Midwest"	"CENS-R2"			1785	540723314	0.330
+	"Census Region 3: South"	"CENS-R3"	"2010"	"2010"	343	114555744	0.299
+	"Census Region 3: South"	"CENS-R3"	"2011"	"2011"	390	116046736	0.336
+	"Census Region 3: South"	"CENS-R3"	"2012"	"2012"	459	117257221	0.391
+	"Census Region 3: South"	"CENS-R3"	"2013"	"2013"	554	118383453	0.468
+	"Census Region 3: South"	"CENS-R3"	"2014"	"2014"	539	119771934	0.450
+	"Census Region 3: South"	"CENS-R3"	"2015"	"2015"	582	121182847	0.480
+	"Census Region 3: South"	"CENS-R3"	"2016"	"2016"	604	122319574	0.494
+	"Census Region 3: South"	"CENS-R3"	"2017"	"2017"	588	123658624	0.476
+"Total"	"Census Region 3: South"	"CENS-R3"			4059	953176133	0.426
+	"Census Region 4: West"	"CENS-R4"	"2010"	"2010"	152	71945553	0.211
+	"Census Region 4: West"	"CENS-R4"	"2011"	"2011"	149	72864748	0.204
+	"Census Region 4: West"	"CENS-R4"	"2012"	"2012"	163	73579431	0.222
+	"Census Region 4: West"	"CENS-R4"	"2013"	"2013"	192	74254423	0.259
+	"Census Region 4: West"	"CENS-R4"	"2014"	"2014"	201	75187681	0.267
+	"Census Region 4: West"	"CENS-R4"	"2015"	"2015"	172	76044679	0.226
+	"Census Region 4: West"	"CENS-R4"	"2016"	"2016"	191	76657000	0.249
+	"Census Region 4: West"	"CENS-R4"	"2017"	"2017"	222	77410622	0.287
+"Total"	"Census Region 4: West"	"CENS-R4"			1442	597944137	0.241
+"Total"					8586	2539502901	0.338
+"---"
+"Dataset: Underlying Cause of Death, 1999-2017"
+"Query Parameters:"
+"ICD-10 Codes: O00-O99 (Pregnancy, childbirth and the puerperium)"
+"Year/Month: 2010; 2011; 2012; 2013; 2014; 2015; 2016; 2017"
+"Group By: Census Region; Year"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: May 10, 2019 12:13:52 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2017 on CDC WONDER Online Database, released December, 2018. Data are from the Multiple Cause of Death Files, 1999-2017, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on May 10, 2019 12:13:52 PM"
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the Vintage 2017"
+"postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The population figures for"
+"year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal series released by NCHS"
+"on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26, 2014. The"
+"population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012 postcensal"
+"series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010 are April 1"
+"Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident population, from"
+"the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population figures for 2000 are"
+"April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1 estimates. Population"
+"figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population figures for years 2001 -"
+"2009 differ slightly from previously published reports, due to use of the population estimates which were available at the time"
+"of release."
+"3. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."
