@@ -1,11 +1,10 @@
 ---
-output:
-  pdf_document:
-    citation_package: natbib
-    fig_caption: yes
-    template: ./resources/aog-latex-ms.tex
-  word_document:
-    reference_docx: ./resources/aog_word_style.docx
+output: pdf_document
+citation_package: natbib
+fig_caption: yes
+template: ./resources/aog-latex-ms.tex
+word_document:
+reference_docx: ./resources/aog_word_style.docx
 fontfamily: mathpazo
 fontsize: 11pt
 anonymous: false
@@ -13,22 +12,30 @@ endnotes: false
 pagenumber: 1
 bibliography: ../project.bib
 biblio-style: ./resources/ajs.bst
-title: "The Title"
-author:
-- affiliation: University of Oregon, Sociology
-  name: Aaron Gullickson
-- affiliation: Some Research University
-  name: My co-author
+title: "Drug Codes and Maternal Mortality"
+author: Olivia Atkinson 
+affiliation: University of Oregon, Sociology
 keywords: keywords
 thanks: Thanks to people and stuff
 abstract: This is a test abstract
 ---
 
 # Introduction
+Maternal mortality rates in the United States are among some of the highest in developed countries. In other developed countries maternal mortality rates have been steadily falling, while those in the U.S. are continuing to rise. There are a myriad of reasons given for these ever increasing statistics ranging from the increasing age of mothers to more structural issues like a broken and complicated healthcare system. On the other hand, infant mortality rates have been on the decline in the United States. I argue that this says something in particular about how the U.S. sees women and their bodies as attached to the state, but that is a broader discussion that needs to be taken up beyond the scope of this current project. However, in keeping with this idea that the U.S. undervalues, over polices, and hypercriminalizes women's bodies, I want to look at how the opiod epidemic in the United States has effected maternal mortality rates. Specfically this project looks at the relationship between drug codes that directly target pregnant women and their effect on maternal mortality. The research question is: What is the relationship between states with criminal codes for opioid use during pregnancy and maternal mortality rates in that state?
+
+Another trend the United States has seen in recent years is an increased use of opioid drugs. This rapid incline and its extremely detrimental and deadly effects have caused politicians, policy makers, and health care experts, among others, to term this trend the "opioid epidemic" or "opioid crisis." The word crisis is particularly useful for inciting a sense of urgency among the public and signaling a time of action. This has opened the doors for states to put regressive and punishing drug codes in place that often have negative effects on drug users and addicts. 
+
+This project is interested in looking at those codes that are directly aimed at pregnant women. These codes are particularly gendered and targeted at criminalizing pregnant women and mothers with often detrimental effects. Although these codes are seemingly put into place as protections/harm reduction, I am hypothesizing that these codes are counterintuitive and actually cause increases in maternal mortality rates because women will not seek out help for fear of punishment.
+
+The United States has a history of regulating and subsequently criminalizing women's bodies, especially pregnant women's bodies. There has been research done on reproductive rights and the policing and criminalization of women's bodies, especially when it comes to things like abortion or birth control access. However, this project looks to fill a gap when it comes to the connection of the area of drug policy and women. This project hopes to connect to larger narratives surrounding the over policing and criminalization of women's bodies and the myriad of ways in which this type of surveillance happens. 
 
 # Background
 
 # Data and Methods
+
+Data on maternal mortality was collected from the CDC WONDER database. The data for "Detailed Mortality - Underlying Cause of Death"" is based on death certificates for U.S. residents. The detailed mortality data is compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative. The data set is produced by the U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, National Center for Health Statistics, and the Division of Vital Statistics, Mortality Statistics Branch. (https://wonder.cdc.gov/DataSets.html)
+
+This dataset is the breakdown of death from pregnancy related causes (maternal mortality) by census region from the years 1999-2017. This data is generalizable because it is representative of the U.S. population. The data is collected at the county-level and gives accurate descriptions of underlying causes of death. 
 
 # Results
 
