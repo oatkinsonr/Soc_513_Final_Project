@@ -23,8 +23,15 @@ doctor_female <- as.data.frame.table(tab)
 colnames(doctor_female) <- c("gender","region","year","percent_female")
 doctor_female <- subset(doctor_female, gender=="Female",
                         select=c("region","year","percent_female"))
-# 
 
+tab2 <- table(mm_data$Deaths, mm_data$Census.Region, mm_data$Year)[2:3, ]
+
+
+
+
+# This is the state maternal mortality data that we worked on when I came to your office hours. 
+# I haven't deleted it yet. Just letting it hang around in case some divine inspiration hits me 
+# and I can end up using it. Unlikely, but still leaving it here. 
 state_mm <- read_tsv("input/state_mm_year.txt", na=c("","NA","Suppressed"))
 
 state_mm <- subset(state_mm, !is.na(Deaths))
