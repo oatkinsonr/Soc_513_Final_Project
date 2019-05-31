@@ -1,0 +1,59 @@
+"Notes"	"Census Region"	"Census Region Code"	"Year"	"Year Code"	Births
+	"Census Region 1: Northeast"	"CENS-R1"	"2010"	"2010"	648435
+	"Census Region 1: Northeast"	"CENS-R1"	"2011"	"2011"	643413
+	"Census Region 1: Northeast"	"CENS-R1"	"2012"	"2012"	638723
+	"Census Region 1: Northeast"	"CENS-R1"	"2013"	"2013"	630305
+	"Census Region 1: Northeast"	"CENS-R1"	"2014"	"2014"	634492
+	"Census Region 1: Northeast"	"CENS-R1"	"2015"	"2015"	630622
+	"Census Region 1: Northeast"	"CENS-R1"	"2016"	"2016"	625197
+	"Census Region 1: Northeast"	"CENS-R1"	"2017"	"2017"	615362
+"Total"	"Census Region 1: Northeast"	"CENS-R1"			5066549
+	"Census Region 2: Midwest"	"CENS-R2"	"2010"	"2010"	842856
+	"Census Region 2: Midwest"	"CENS-R2"	"2011"	"2011"	834224
+	"Census Region 2: Midwest"	"CENS-R2"	"2012"	"2012"	832669
+	"Census Region 2: Midwest"	"CENS-R2"	"2013"	"2013"	830437
+	"Census Region 2: Midwest"	"CENS-R2"	"2014"	"2014"	838249
+	"Census Region 2: Midwest"	"CENS-R2"	"2015"	"2015"	835633
+	"Census Region 2: Midwest"	"CENS-R2"	"2016"	"2016"	827708
+	"Census Region 2: Midwest"	"CENS-R2"	"2017"	"2017"	810063
+"Total"	"Census Region 2: Midwest"	"CENS-R2"			6651839
+	"Census Region 3: South"	"CENS-R3"	"2010"	"2010"	1522671
+	"Census Region 3: South"	"CENS-R3"	"2011"	"2011"	1505111
+	"Census Region 3: South"	"CENS-R3"	"2012"	"2012"	1507272
+	"Census Region 3: South"	"CENS-R3"	"2013"	"2013"	1509217
+	"Census Region 3: South"	"CENS-R3"	"2014"	"2014"	1539585
+	"Census Region 3: South"	"CENS-R3"	"2015"	"2015"	1548148
+	"Census Region 3: South"	"CENS-R3"	"2016"	"2016"	1534136
+	"Census Region 3: South"	"CENS-R3"	"2017"	"2017"	1504017
+"Total"	"Census Region 3: South"	"CENS-R3"			12170157
+	"Census Region 4: West"	"CENS-R4"	"2010"	"2010"	985424
+	"Census Region 4: West"	"CENS-R4"	"2011"	"2011"	970842
+	"Census Region 4: West"	"CENS-R4"	"2012"	"2012"	974177
+	"Census Region 4: West"	"CENS-R4"	"2013"	"2013"	962222
+	"Census Region 4: West"	"CENS-R4"	"2014"	"2014"	975750
+	"Census Region 4: West"	"CENS-R4"	"2015"	"2015"	964094
+	"Census Region 4: West"	"CENS-R4"	"2016"	"2016"	958834
+	"Census Region 4: West"	"CENS-R4"	"2017"	"2017"	926058
+"Total"	"Census Region 4: West"	"CENS-R4"			7717401
+"Total"					31605946
+"---"
+"Dataset: Natality, 2007-2017"
+"Query Parameters:"
+"Year: 2010; 2011; 2012; 2013; 2014; 2015; 2016; 2017"
+"Group By: Census Region; Year"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 1,000"
+"Population Option: No populations shown because rates were not selected."
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/Natality.html for more information."
+"---"
+"Query Date: May 30, 2019 6:05:04 PM"
+"---"
+"Suggested Citation: United States Department of Health and Human Services (US DHHS), Centers for Disease Control and Prevention"
+"(CDC), National Center for Health Statistics (NCHS), Division of Vital Statistics, Natality public-use data 2007-2017, on CDC"
+"WONDER Online Database, October 2018. Accessed at http://wonder.cdc.gov/natality-current.html on May 30, 2019 6:05:04 PM"
+"---"
+Caveats:
+"1. Each birth record represents one living baby."
