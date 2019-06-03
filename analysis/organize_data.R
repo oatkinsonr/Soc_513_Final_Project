@@ -46,7 +46,7 @@ colnames(birth_data) <- c("region","year","births")
 
 #Creating the Maternal Mortality Ratio
 mm <- merge(mm_data, birth_data)
-mmr <- (mm$deaths/mm$births)
+mm$mmr <- (mm$deaths/mm$births)
 
 ----------------------------------------------------------------------------------------
 #Doctor Gender Data 
