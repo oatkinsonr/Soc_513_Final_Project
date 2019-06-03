@@ -45,7 +45,9 @@ birth_data <- subset(birth_data,
 colnames(birth_data) <- c("region","year","births")
 
 #Creating the Maternal Mortality Ratio
-mmr <- mm_data 
+mm <- merge(mm_data, birth_data)
+mmr <- (mm$deaths/mm$births)
+
 ----------------------------------------------------------------------------------------
 #Doctor Gender Data 
 docgender_data <- read.csv("input/doc_gender.csv")
