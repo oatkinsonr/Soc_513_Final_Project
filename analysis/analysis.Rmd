@@ -11,16 +11,57 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 source("useful_functions.R")
-load(output/)
+load("output/analytical_data.RData")
 library(ggplot2)
+library(texreg)
 ```
 
 # Introduction
 <a href="#top">Back to top</a>
 
-Use this R Markdown to perform the main analysis for the project. I use this basically as a lab notebook. It contains the main analysis and a variety of sensitivity analysis. The code in this documents serves as a baseline for the eventual tables and figures that will go into the paper. At the same time it will serve as a record of all supplementary analyses performed. 
+This project is looking at the relationship between female physcians and maternal mortality rates. The female physician data are self reported by the patient. Indiviudals were asked if their usual medical care provider was a male or female. I have figures measuring the relationship between female doctors and maternal mortality rate (mmr) as well as figures looking at the trends of mmr and the percent of female doctors over time. 
 
-```{r name, fig.cap="", fig.align="center"}
+```{r name, fig.cap="maternal mortality rate by percent of female doctors", fig.align="center"}
+ggplot(mm, aes(x=percent_female, y=mmr))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+  scale_y_log10()+
+  theme_bw()
 
 ```
+
+```{r}
+ggplot(mm, aes(x=year, y=mmr))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+    scale_y_log10()+
+    theme_bw()
+```
+```{r}
+ggplot(mm, aes(x=year, y=percent_female))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+    scale_y_log10()+
+    theme_bw()
+```
+
+```{r models, results='asis'}
+model1 <- lm(log(mmr)~percent_female, data=mm)
+#summary(model1)
+model.fixed_region <- lm(log(mmr)~percent_female+region, data=mm)
+#summary(model.fixed_region)
+model.fixed_both <- lm(log(mmr)~percent_female+region+as.factor(year), data=mm)
+#summary(model.fixed_both)
+htmlreg(list(model1, model.fixed_region, model.fixed_both), digits=3)
+
+model2 <- lm(year~log(mmr), data=mm)
+model2
+
+model3 <- lm(year~percent_female, data=mm)
+model3
+```
+
 
