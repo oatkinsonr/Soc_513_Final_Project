@@ -10,6 +10,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+getwd()
 source("useful_functions.R")
 load("output/analytical_data.RData")
 library(ggplot2)
@@ -49,18 +50,19 @@ ggplot(mm, aes(x=year, y=percent_female))+
 ```
 
 ```{r models, results='asis'}
+model0 <- lm(log(mmr)~region+as.factor(year), data=mm)
 model1 <- lm(log(mmr)~percent_female, data=mm)
 #summary(model1)
 model.fixed_region <- lm(log(mmr)~percent_female+region, data=mm)
 #summary(model.fixed_region)
 model.fixed_both <- lm(log(mmr)~percent_female+region+as.factor(year), data=mm)
 #summary(model.fixed_both)
-htmlreg(list(model1, model.fixed_region, model.fixed_both), digits=3)
+screenreg(list(model0, model1, model.fixed_region, model.fixed_both), digits=3)
 
-model2 <- lm(year~log(mmr), data=mm)
+model2 <- lm(log(mmr)~year, data=mm)
 model2
 
-model3 <- lm(year~percent_female, data=mm)
+model3 <- lm(percent_female~year, data=mm)
 model3
 ```
 

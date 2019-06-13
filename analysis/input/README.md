@@ -39,7 +39,7 @@ https://wonder.cdc.gov/controller/datarequest/D66;jsessionid=773E3F8ECF676010B13
 ## Dataset 3 
 # This data is from the IPUMS Health Surveys. From the IPUMS homepage (https://www.ipums.org/) click on the "IPUMS Health Surveys". This will take you to the Health Surveys homepage (https://www.ipums.org/healthsurveys.shtml). From here, click on the MEPS (Medical Expenditure Panel Survey) "Get Data" button. 
 
-#You will be redirected to another page (https://meps.ipums.org/meps/). From here, under "Create an Extract", click "Get Data". Under "Select Variables" in the "Annual" section, choose "Access to Care". From here choose the variable "Usual medical care provider is male or female."  Again in the "Annual" section, choose "Core Demographic." From here choose the variables "Age" and "Sex." In the "Annual" section click "Ethnicity/Nativity" and choose the variable "Main Racial Background." In the "Round" section under "Select Variables" choose "Demographic." Select the variables "Census Region".
+#You will be redirected to another page (https://meps.ipums.org/meps/). From here, under "Create an Extract", click "Get Data". Under "Select Variables" in the "Annual" section, choose "Access to Care". From here choose the variable "Usual medical care provider is male or female." In the "Round" section under "Select Variables" choose "Demographic." Select the variables "Census Region".
 
 #After selecting all your variables, click "Select Samples". You will be directed to another pages (https://meps.ipums.org/meps-action/samples). From here click the years 2010-2017. Now, go to your Data Cart and click "View Cart". All your variables will appear. Click "Create Extract" then "Submit Extract" (https://meps.ipums.org/meps-action/extract_requests/download). 
 

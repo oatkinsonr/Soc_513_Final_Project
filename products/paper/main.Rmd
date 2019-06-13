@@ -1,44 +1,130 @@
 ---
-output: pdf_document
+title: "Are Women Actually Better Doctors? The Relationship Between Female Physicians and Maternal Mortality Ratios"
+author: "Olivia Atkinson"
+anonymous: false
+output:
+  pdf_document: 
+  html_document:
+    df_print: paged
+    thanks: Thanks to Dr. Aaron Gullickson for putting up with my complete lack of knowledge in             both statistics and R. Your patience is appreciated. I will not miss feeling like a             complete idiot every Tuesday and Thursday.
+biblio-style: ./resources/ajs.bst
+bibliography: ../project.bib
 citation_package: natbib
+endnotes: false
 fig_caption: yes
-template: ./resources/aog-latex-ms.tex
-word_document:
-reference_docx: ./resources/aog_word_style.docx
 fontfamily: mathpazo
 fontsize: 11pt
-anonymous: false
-endnotes: false
-pagenumber: 1
-bibliography: ../project.bib
-biblio-style: ./resources/ajs.bst
-title: "Drug Codes and Maternal Mortality"
-author: Olivia Atkinson 
+keywords: maternal mortality, female physicans, gender norms and behavior
 affiliation: University of Oregon, Sociology
-keywords: keywords
-thanks: Thanks to people and stuff
-abstract: This is a test abstract
+pagenumber: 1
+reference_docx: ./resources/aog_word_style.docx
+template: ./resources/aog-latex-ms.tex
+
+abstract: null
+word_document: null 
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+load("../../analysis/output/analytical_data.RData")
+library(ggplot2)
+library(texreg)
+```
 
 # Introduction
-Maternal mortality rates in the United States are among some of the highest in developed countries. In other developed countries maternal mortality rates have been steadily falling, while those in the U.S. are continuing to rise. There are a myriad of reasons given for these ever increasing statistics ranging from the increasing age of mothers to more structural issues like a broken and complicated healthcare system. On the other hand, infant mortality rates have been on the decline in the United States. I argue that this says something in particular about how the U.S. sees women and their bodies as attached to the state, but that is a broader discussion that needs to be taken up beyond the scope of this current project. However, in keeping with this idea that the U.S. undervalues, over polices, and hypercriminalizes women's bodies, I want to look at how the opiod epidemic in the United States has effected maternal mortality rates. Specfically this project looks at the relationship between drug codes that directly target pregnant women and their effect on maternal mortality. The research question is: What is the relationship between states with criminal codes for opioid use during pregnancy and maternal mortality rates in that state?
+  Maternal mortality rates in the United States are among some of the highest in developed countries. In other developed countries maternal mortality rates have been steadily falling, while rates in the U.S. are continuing to rise. This seems especially troubling for a country like the United States where access to care and treatment is and should be easy, hypothetically. However, while the U.S. as a whole has access to some of the best medical resources in the world, only a certain portion of the population are able to access those resources and the care that they need. 
 
-Another trend the United States has seen in recent years is an increased use of opioid drugs. This rapid incline and its extremely detrimental and deadly effects have caused politicians, policy makers, and health care experts, among others, to term this trend the "opioid epidemic" or "opioid crisis." The word crisis is particularly useful for inciting a sense of urgency among the public and signaling a time of action. This has opened the doors for states to put regressive and punishing drug codes in place that often have negative effects on drug users and addicts. 
+  Additionally, maternal mortality rates are hard to calculate and accurately record. Although the rising rates of maternal mortality are caused by a myriad of reasons ranging from the increasing age of mothers to more structural issues like a broken and complicated healthcare system it should not deter reserachers from conducting research that can better uncover the reasons (even if they are multiple) leading to the alarming rise of maternal deaths. In fact, the lack of data and the difficulty of conducting such research should be a motivating factor for other researchers and scholars who are invested in finding underlying causes of maternal deaths and suggesting policy solutions to help alleviate them. 
 
-This project is interested in looking at those codes that are directly aimed at pregnant women. These codes are particularly gendered and targeted at criminalizing pregnant women and mothers with often detrimental effects. Although these codes are seemingly put into place as protections/harm reduction, I am hypothesizing that these codes are counterintuitive and actually cause increases in maternal mortality rates because women will not seek out help for fear of punishment.
+  Another trend that has been on the rise in the United States is the percentage of female physicians. Today, the majority of physicians under the age of 35 are women (https://www.athenahealth.com/insight/healthcare-future-female). With the number of female physicians on the rise, I am interested in looking at the relationship between the maternal mortality ratios and the percentage of patients who see female doctors. The main question this paper seeks to answer is: Does seeing a female physician decrease a woman's chances of dying from pregnancy related causes? Because of gendered norms and behavior, women are thought to be and generally are more caring, attentive, and emotionally available compared to their male counterparts who are seen as aggressive, unwelcoming, and less communicative. This translates in a number of areas in social life, and this paper is interested in seeing if it would also transfer into the medical profession, as well. 
 
-The United States has a history of regulating and subsequently criminalizing women's bodies, especially pregnant women's bodies. There has been research done on reproductive rights and the policing and criminalization of women's bodies, especially when it comes to things like abortion or birth control access. However, this project looks to fill a gap when it comes to the connection of the area of drug policy and women. This project hopes to connect to larger narratives surrounding the over policing and criminalization of women's bodies and the myriad of ways in which this type of surveillance happens. 
-
-# Background
+  There have been a number of studies conducted that look at the relationship between patient care and physician gender (https://www.washingtonpost.com/news/wonk/wp/2016/12/19/women-really-are-better-doctors-study-suggests/?utm_term=.37ed10ba316f, https://www.ncbi.nlm.nih.gov/pubmed/18397244, https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2593255). However, none of the studies have looked specifically at a physician's gender and its relationship to maternal mortality. As such, this project hopes to fill a gap in the literature and also encourage further studies that look at this specific relationship. 
 
 # Data and Methods
+  Data on maternal mortality and natality was collected from the CDC WONDER database. WONDER is an acronymn for Wide-ranging Online Data for Epidemiologic Research and provides public health data and information to the public. The maternal mortality ratio was calculated by dividing the total number of maternal deaths in a census region by the total number of births in a census region from the years 2000-2016. 
 
-Data on maternal mortality was collected from the CDC WONDER database. WONDER is an acronymn for Wide-ranging Online Data for Epidemiologic Research and provides public health data and information to the public. This data is the maternal mortality rate by census region from the years 1999-2017.The data for "Detailed Mortality - Underlying Cause of Death"" is based on death certificates for U.S. residents. The detailed mortality data is compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative. The data set is produced by the U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, National Center for Health Statistics, and the Division of Vital Statistics, Mortality Statistics Branch. (https://wonder.cdc.gov/DataSets.html)
+  The data for "Detailed Mortality - Underlying Cause of Death"" is based on death certificates for U.S. residents. The detailed mortality data is compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative. The data set is produced by the U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, National Center for Health Statistics, and the Division of Vital Statistics, Mortality Statistics Branch. (https://wonder.cdc.gov/DataSets.html). The natality data is the number of live births occurring within a given year. The natality data is divided up into three databases (1995-2002, 2003-2006, and 2007-2017) because of changes in reporting standards regarding race in 2003. 
 
-This dataset is the breakdown of death from pregnancy related causes (maternal mortality) by census region from the years 1999-2017. This data is generalizable because it is representative of the U.S. population. The data is collected at the county-level and gives accurate descriptions of underlying causes of death. 
+  Data for physician gender was taken from the IPUMS Health Surveys in the Medical Expenditure Panel Survey. The MEPS is a survey conducted through five rounds of interviews over a period of roughly two years. The data for physician gender reports whether the individual's usual source of care provider is male or female. To be asked the question about their physician's gender, survery respondents had to be eligible for the Access to Care supplement. To be eligible, individuals had to be current, non-institutionalized members of the responding unit in round 2 for panel members in relative year 1 and round 4 for panel members in relative year 2. 
+
+  In the maternal mortality dataset I created a subset of the region, year, and deaths variables. In the natality dataset I created a subset of region, year, and births variables. I then created the maternal mortality ratio by first merging the maternal deaths data with the births data then divided deaths by births. For the data on physician gender, I dropped all responses that were male, unknown, or coded "not in universe". From there, I subset the female physician data by year and region. Finally, I merged the maternal mortality ratio data with the percent female doctor data. 
+
+  The data for maternal deaths were only available at the census region level. Thus, the results and any analysis drawn from the results are very crude. Also, the data on a individual's physician's gender was self-reported and only certain people were eligible to answer the question. However, this still provides a good starting point for further research on this topic. The data is also limited because no other independent variables were controlled for in such as age, income, etc. However, I felt it was unnecessary to include these variables since I was working on such an abstracted level (i.e. census region). If this project was conducted on the state level, other variables such as the ones previously listed would be useful to include in the analysis. 
+
+  I used a two-way within fixed effects OLS regression analysis. This allowed me to rule out spuriousness from the time-constant covariates of percent female and maternal mortality. Because both of these trends have been steadily rising over the years, it seemed as though as the number of female physicians increased so did the maternal mortality ratio, disproving my hypothesis. However, once I put in dummy variables for year the relationship between female physicians and maternal mortality changed to now show a positive effect between increased rates of female physicians and maternal mortality rates. In other words, as the percentage of female physicians went up, the maternal mortality ratio decreased. I also included a dummy variable for region to soak up any within region differences that might be accounting for a change in maternal mortality rates to get a better look at the relationship between physician gender and maternal mortality rates. 
+
+  The first figure is a bivariate graph that shows the relationship between the percentage of female physicians with maternal mortality rates without accounting for the simultaneous increase over the years. I multiplied the the maternal mortality ratio by 100,000 in the first and second graph because the numbers were small therefore making the graph more easily understandable. The second and third figures separate out the maternal mortality ratio and the percentage of female physicians by year to show that each is increasing. 
+
+  The models I ran are OLS two-way within fixed effects regression tables. The only model of particular importance for this study is Model 4, which is the two-way fixed effects model with dummy variables for both region and year. 
 
 # Results
+  Figure 1 is a bivariate graph that shows the maternal mortality ratio by percent female physicians. As you can see, in every census region as the percent of female doctors increases so does the maternal mortality ratio. This is exactly opposite of the expected results based on priors and outside literature. Figure 2 and Figure 3 are both bivariate graphs showing that maternal mortality and the percent of female doctors has been increasing over the years. Because both maternal mortality rates and the percentage of female doctors have been increasing when looking at the relationship together it seems as though an increase in the percent of female doctors correlates to an increase in maternal deaths. 
+
+  However, as Model 4 shows when the year and region are fitted with dummy variables the relationship between the percentage of female physicians with the maternal mortality ratio flips. The maternal mortality ratio actually decreases and the percentage of female physicians increases. However, this relationship is not statistically significant. On average, for every one percent increase in female physicians there is a 1.6 percent decrease in the maternal mortality ratio. While this does not seem that significant, as mentioned above in the data section, this data is at the census region level so any analysis or results will be somewhat crudely generalizable. 
+
+  Although the R-squared values are significant, because this model is a fixed effects model R-squared values are meaningless because they include all of the time-constant variation making them inaccurate. 
+
+  Looking at the data by region, it becomes clear that there are major disparities between regions, especially the South and the West. As shown in Figure 2, the West has the lowest number of maternal deaths and the South has the most. The Midwest and Northeast are relatively similar. In Figure 3, the South has the lowest percentage of female physicians whereas the West has the highest. Again, the Midwest and the Northeast are relatively similar in the middle. 
+```{r name, fig.cap="maternal mortality ratio by percent of female doctors", fig.align="center"}
+ggplot(mm, aes(x=percent_female, y=mmr*100000))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+  labs(x="percent female doctors", y="maternal deaths per 100,000 births")+
+  theme_bw()
+
+```
+ 
+
+
+```{r, fig.cap= "maternal mortality ratio by year", fig.align="center"}
+ggplot(mm, aes(x=year, y=mmr*100000))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+  labs(x="year", y="maternal deaths per 100,000 births")+
+  scale_y_log10()+
+    theme_bw()
+```
+
+```{r, fig.cap="percent female physicians by year", fig.align="center"}
+ggplot(mm, aes(x=year, y=percent_female))+
+  geom_point(aes(color=region))+
+  geom_smooth(method="lm", se=FALSE)+
+  geom_smooth(method="lm", se=FALSE, aes(color=region, group=region))+
+  labs(x="year", y="percent female doctors")+
+    scale_y_log10()+
+    theme_bw()
+```
+
+```{r models, results='asis'}
+model0 <- lm(log(mmr)~region+as.factor(year), data=mm)
+model1 <- lm(log(mmr)~percent_female, data=mm)
+#summary(model1)
+model.fixed_region <- lm(log(mmr)~percent_female+region, data=mm)
+#summary(model.fixed_region)
+model.fixed_both <- lm(log(mmr)~percent_female+region+as.factor(year), data=mm)
+#summary(model.fixed_both)
+texreg(list(model0, model1, model.fixed_region, model.fixed_both), digits=3, caption="Regression Model Predicting Maternal Mortality Ratios by Percent Female Doctors", caption.above=TRUE)
+
+model2 <- lm(log(mmr)~year, data=mm)
+
+model3 <- lm(percent_female~year, data=mm)
+
+
+```
 
 # Conclusions
+  In conclusion, this project looked at how the percentage of female physicians effected the maternal mortality rate. The data tells us that the percentage of female physicians has an effect on maternal mortality ratios. While these results were not statistically significant, I hypothesize that better data at a smaller unit of analysis will show similar but stronger results. As such, further research should be conducted regarding this issue. 
+  
+  As stated previously, the results drawn from this study are crude at best. However, it does offer a starting point for other more in-depth research on the relationship between maternal mortality ratios and the gender of a patient's physician. This obviously should not discourage men from practicing medicine. However, it should highlight how engrained gender ideas, norms, and behaviors can have real-world effects. Male physicians should be more aware of how they interact with patients and take more care to listen to their patients, ask them how they feel about the care they are getting, discussing care adn treatment options openly with patients as well as being more open to engaging in conversation and welcoming questions and comments from patients throughout the process. 
+  
+  On a larger scale, this points to how harmful gendered norms and behavior can be, not only for individual people but for those they interact with, too. Working to dismantle these stereotypes and expectations from a young age will have large-scale effects in the long run. 
+  
+  Any studies on maternal mortality and its underlying causes should be taken seriously as it is a trend in the United States that is increasing. The health and wellness of women is something that, as we have seen recently, is not taken seriously by certain governmental bodies. Further, there should be more research conducted to understand the differences between regional differences of maternal mortality and what can be done to alleviate those causes. The South is a rural area and many women do not have immediate access to the care that they need pre- and post-natal. 
 
 # References
+Tsugawa Y, Jena AB, Figueroa JF, Orav EJ, Blumenthal DM, Jha AK. Comparison of Hospital Mortality and Readmission Rates for Medicare Patients Treated by Male vs Female Physicians. JAMA Intern Med. 2017;177(2):206–213. doi:10.1001/jamainternmed.2016.7875
+
+Johnson, Carolyn Y. Women really are better doctors, study suggests . December 16, 2016. https://www.washingtonpost.com/news/wonk/wp/2016/12/19/women-really-are-better-doctors-study-suggests/?utm_term=.37ed10ba316f (accessed June 05, 2019).
+
+Berthold, H. K., Gouni‐Berthold, I. , Bestehorn, K. P., Böhm, M. and Krone, W. (2008), Physician gender is associated with the quality of type 2 diabetes care. Journal of Internal Medicine, 264: 340-350. doi:10.1111/j.1365-2796.2008.01967.x
