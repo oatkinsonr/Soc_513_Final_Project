@@ -65,7 +65,7 @@ library(texreg)
   Although the R-squared values are significant, this is a fixed effects model so the R-squared values are basically meaningless because they include all of the time-constant variation making them inaccurate. 
 
   Looking at the data by region, it becomes clear that there are major disparities between regions, especially the South and the West. As shown in Figure 2, the West has the lowest number of maternal deaths and the South has the most. The Midwest and Northeast are relatively similar. In Figure 3, the South has the lowest percentage of female physicians whereas the West has the highest. Again, the Midwest and the Northeast are relatively similar in the middle. 
-```{r name1, fig.cap="maternal mortality ratio by percent of female doctors"}
+```{r name1, fig.cap= "maternal mortality ratio by percent of female doctors"}
 ggplot(mm, aes(x=percent_female, y=mmr*100000))+
   geom_point(aes(color=region))+
   geom_smooth(method="lm", se=FALSE)+
